@@ -11,18 +11,14 @@ struct IconChooser: View {
     @EnvironmentObject var model: Model
 
     var body: some View {
-        let columns = [
-            GridItem(),
-            GridItem(),
-            GridItem()
-        ]
+        let columns = Array(repeating: GridItem(.adaptive(minimum: 114, maximum: 1024), spacing: 0), count: 3)
 
         VStack {
             HStack {
                 Text("Select an icon:")
-                    .font(.title)
+                    .font(.largeTitle)
                 IconImage(icon: model.appIcon)
-                    .frame(maxHeight: 100)
+                    .frame(maxHeight: 114)
             }
             ScrollView {
                 LazyVGrid(columns: columns) {

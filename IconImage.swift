@@ -17,7 +17,7 @@ struct IconImage: View {
             Image(uiImage: UIImage(named: icon.rawValue) ?? UIImage())
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(minHeight: 64)
+                .frame(minHeight: 57, maxHeight: 1024)
                 .cornerRadius(10)
                 .shadow(radius: 10)
                 .padding()
